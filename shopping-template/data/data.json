@@ -25,8 +25,8 @@
             "type": "skirt",
             "gender": "female",
             "size": "large",
-            "color": "pink",
-            "image": "img/pink_s.png"
+            "color": "yellow",
+            "image": "img/yellow_s.png"
         },
         {
             "type": "tshirt",
@@ -39,8 +39,8 @@
             "type": "tshirt",
             "gender": "female",
             "size": "large",
-            "color": "pink",
-            "image": "img/pink_t.png"
+            "color": "blue",
+            "image": "img/blue_t.png"
         },
         {
             "type": "tshirt",

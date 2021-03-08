@@ -21,11 +21,35 @@ function createHTMLString(item) {
     `;
 }
 
+function onButtonClick(e, items) {
+    console.log(e.target.dataset.key);
+    console.log(e.target.dataset.value);
+    const dataset = e.target.dataset;
+    const key = dataset.key;
+    const value = dataset.value;
+
+    if (key == null || value == null) {
+        return;
+    }
+
+    const filtered = items.filter((item) => item[key] === value);
+    console.log(filtered);
+    displayItems(filtered);
+}
+
+function setEventListener(items) {
+    const logo = document.querySelector(".logo");
+    const btns = document.querySelector("nav");
+
+    logo.addEventListener("click", () => displayItems(items));
+    btns.addEventListener("click", (e) => onButtonClick(e, items));
+}
+
 // promise 사용해주기 (성공할땐 .then  /  실패할땐 .catch)
 loadItems()
     .then((items) => {
         displayItems(items);
-        //setEventListener(items)
+        setEventListener(items);
     })
     .catch(console.log);
 
